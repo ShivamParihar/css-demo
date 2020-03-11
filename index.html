@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo</title>
+	<style>
+	.toggle input {
+	  display: none;
+	}
+
+	.toggle {
+	  position: relative;
+	  display: inline-block;
+	  width: 400px;
+	  height: 200px;
+	  border-radius: 50%;
+	}
+	.slider {
+	  position: absolute;
+	  cursor: pointer;
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  background-color: #125612;
+	  border: 1px solid #aaa;
+	  border-radius: 200px;
+	  transition: all 0.4s;
+	}
+
+	/* The sliding button */
+	.slider:before {
+	  position: absolute;
+	  content: "";
+	  width: 160px;
+	  height: 160px;
+	  left: 25px;
+	  top: 20px;
+	  background-color: white;
+	  border-radius: 50%;
+	  transition: all 0.4s;
+	}
+
+	/* On checked */
+	input:checked + .slider {
+	  background-color: #235689;
+	}
+	input:checked + .slider:before {
+	  transform: translateX(190px);
+	}
+	</style>
+</head>
+<body style="text-align: center;padding-top: 180px;">
+    <label class="toggle">
+      <input type="checkbox"/>
+      <span class="slider"></span>
+    </label>
+</body>
+</html>
